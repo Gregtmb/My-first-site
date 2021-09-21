@@ -22,6 +22,10 @@ header {
     display: inline-block;
     vertical-align: middle;
     margin: 10px 280px 0px 30px;
+    -webkit-animation: logo 8s ease;
+    -o-animation: logo 8s ease;
+    animation: logo 8s ease;
+    
 }
 
 nav {
@@ -35,6 +39,7 @@ nav a {
     color: white;
     font-size: 25px;
     color: white;
+    transition: all 0.1s;
     transform: scale(1);
     display: inline-block;
     text-decoration: none;
@@ -42,7 +47,7 @@ nav a {
 }
 
 nav li a:active {
-    transform: scale(1.3);
+    transform: scale(1.1);
 }
 
 
@@ -52,6 +57,10 @@ nav li {
     /* border: 1px solid red; */
     margin-right: 70px;
     display: inline-block;
+     opacity: 0;
+    -webkit-animation: li 2s ease forwards;
+    -o-animation: li 2s ease forwards;
+    animation: li 2s ease forwards;
 }
 
 
@@ -65,6 +74,8 @@ nav a:hover {
 
 .main1 {
     /* border: 3px solid black; */
+    width: 100%;
+    height: 100%;
     margin: 0 auto;
     background-color: #6451d5;
 }
@@ -73,6 +84,12 @@ nav a:hover {
     display: inline-block;
     margin-left: 30px;
     /* border: 1px solid red; */
+}
+.animation__main1{
+    display: inline-block;
+    -webkit-animation: animation__main1 2s ease;
+    -o-animation: animation__main1 2s ease;
+    animation: animation__main1 2s ease;
 }
 
 .phoone {
@@ -101,6 +118,7 @@ nav a:hover {
     font-size: 20px;
     padding: 25px;
     background-color: #382e75;
+/*    transition: all 0.3s;*/
     transform: scale(1);
     
 }
@@ -116,11 +134,62 @@ nav a:hover {
 }
 
 
+@keyframes logo{
+    from {
+        opacity: 0;
+    }
+    
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes li{
+    from {
+        opacity: 0;
+        margin-top: -70px;
+    }
+    
+    to{
+        opacity: 1;
+        margin-top: 0px;
+    }
+}
+nav li:nth-child(1){
+    animation-delay: 2s;
+}
+nav li:nth-child(2){
+    animation-delay: 2.5s;
+}
+nav li:nth-child(3){
+    animation-delay: 3s;
+}
+nav li:nth-child(4){
+    animation-delay: 3.5s;
+}
+
+
+
+@keyframes animation__main1{
+    from {
+        opacity: 0;
+        margin-left: -100px;
+    }
+    
+    to{
+        opacity: 1;
+        margin-top: 30px;
+    }
+}
+
 .main2 {
     width: 100%;
     height: 300px;
     background: url(img/EXInF5z_FcQ.jpg) 17% 35%/auto no-repeat, url(img/oqSKkjkwnlE.jpg)50% 35%/auto no-repeat, url(img/mRmFQ5-ipr4.jpg)84% 35%/auto no-repeat;
     background-color: #efefef;
+    -webkit-animation: main2;
+    -o-animation: main2;
+    animation: main2;
 
 }
 
@@ -165,6 +234,19 @@ nav a:hover {
     display: inline-block;
     text-align: center;
     margin-left: 100px;
+}
+
+
+@keyframes main2{
+    from {
+        opacity: 0;
+        margin-left: -100px;
+    }
+    
+    to{
+        opacity: 1;
+        margin-top: 30px;
+    }
 }
 
 .main3 {
@@ -216,9 +298,11 @@ nav a:hover {
     height: 80px; 
 /*    border: 1px solid #c5c5c5;*/
     font-size: 20px;
-        
-
 }
+    .main4 .text:focus{
+     outline: none;
+     box-shadow: 0 0 0 4px red;
+    }
 
 .main4 textarea {
     margin-left: 30px;
@@ -226,6 +310,11 @@ nav a:hover {
 /*    border: 1px solid #c5c5c5;*/
     font-size: 20px;
 }
+
+.main4 textarea:focus{
+    outline: none;
+     box-shadow: 0 0 0 4px red;
+    }
 
 .main4 label{
     font-size: 25px;
@@ -290,6 +379,9 @@ footer .logo2{
     margin-top: 300px;
     margin-right: 115px;
 }
+{
+    display: inline-block;
+}
 
 
 .kolonka1, .kolonka2, .kolonka3, .kolonka4{
@@ -301,6 +393,7 @@ footer a{
     font-size: 25px;
     color: #8984a4;
     transform: scale(1);
+    display: inline-block;
 } 
 
 footer li{
@@ -324,4 +417,3 @@ footer li:first-child a:hover{
  footer a:hover{
     color: red;
 }
-
